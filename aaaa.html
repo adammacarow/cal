@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kalkulator Sederhana</title>
+    <style>
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: bisque;
+            box-shadow: 2cm;
+            text-shadow: 1ch;
+        }
+        input, button {
+            margin: 5px;
+            padding: 5px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="number" id="num1" placeholder="Angka pertama">
+        <input type="number" id="num2" placeholder="Angka kedua">
+        <br>
+        <button onclick="1()">1</button>
+        <button onclick="2">2</button>
+        <button onclick="3">3</button>
+        <button onclick="4">4</button>
+        <button onclick="5">5</button>
+        <button onclick="6">6</button>
+        <button onclick="7">7</button>
+        <button onclick="8">8</button>
+        <button onclick="9">9</button>
+        <button onclick="0">0</button>
+
+        <button onclick="tambah()">+</button>
+        <button onclick="kurang()">-</button>
+        <button onclick="kali()">×</button>
+        <button onclick="bagi()">÷</button>
+        <div class="result" id="hasil">Hasil: </div>
+    </div>
+
+    <script>
+        function tambah() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("hasil").innerHTML = "Hasil: " + (num1 + num2);
+        }
+
+        function kurang() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("hasil").innerHTML = "Hasil: " + (num1 - num2);
+        }
+
+        function kali() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("hasil").innerHTML = "Hasil: " + (num1 * num2);
+        }
+
+        function bagi() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            if (num2 === 0) {
+                document.getElementById("hasil").innerHTML = "Error: Tidak bisa membagi dengan nol";
+            } else {
+                document.getElementById("hasil").innerHTML = "Hasil: " + (num1 / num2);
+            }
+        }
+    </script>
+</body>
+
+</html>
