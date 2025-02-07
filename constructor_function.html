@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function</title>
+</head>
+<body>
+    <div>
+        <h1>Constructor Function</h1>
+    </div>
+    <script>
+            function Mobil(merk, model, tahun, harga) {
+                this.merk = merk;
+                this.model = model;
+                this.tahun = tahun;
+                this.harga = harga;
+    
+                this.start = function() {
+                    console.log(`Mobil ${this.merk} ${this.model} tahun ${this.tahun} sudah dinyalakan dengan harga ${this.harga}`);
+                }
+    
+                this.stop = function() {    
+                    console.log(`Mobil ${this.merk} ${this.model} tahun ${this.tahun} sudah dimatikan`);
+                }
+            }
+    
+            let mobil1 = new Mobil("Toyota", "Avanza", 2019, 200000000);
+            let mobil2 = new Mobil("Honda", "Jazz", 2018, 250000000);
+            let mobil3 = new Mobil("Suzuki", "Ertiga", 2017, 180000000);
+            let mobil4 = new Mobil("Mitsubishi", "Xpander", 2019, 300000000);
+            let mobil5 = new Mobil("Daihatsu", "Xenia", 2016, 150000000);
+    
+            mobil1.start();
+            mobil2.start();
+            mobil3.stop();
+            mobil4.start();
+            mobil5.stop();
+
+            document.write("<h2>Daftar Mobil</h2>");
+            document.write("<ul>");
+            document.write("<li>" + mobil1.merk + " " + mobil1.model + " (" + mobil1.tahun + ") - Rp" + mobil1.harga + "</li>");
+            document.write("<li>" + mobil2.merk + " " + mobil2.model + " (" + mobil2.tahun + ") - Rp" + mobil2.harga + "</li>");
+            document.write("<li>" + mobil3.merk + " " + mobil3.model + " (" + mobil3.tahun + ") - Rp" + mobil3.harga + "</li>");
+            document.write("<li>" + mobil4.merk + " " + mobil4.model + " (" + mobil4.tahun + ") - Rp" + mobil4.harga + "</li>");
+            document.write("<li>" + mobil5.merk + " " + mobil5.model + " (" + mobil5.tahun + ") - Rp" + mobil5.harga + "</li>");
+            document.write("</ul>");
+
+            
+        </script>
+    </script>
+</body>
+</html>

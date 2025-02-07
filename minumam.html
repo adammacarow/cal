@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <style>
+        body {
+            font-size: 20px;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            color: green;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div> Daftar Minuman</div>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <h2>JavaScript Performance</h2>
+
+    <p>If you expect to access a DOM element several times, access it once, and the use it as a local variable:</p>
+
+    <b id="demo">test</b>
+    <h1 id="h1"></h1>
+    <h1 id="h2"></h1>
+
+    <h3 id="demo2"></h3>
+
+    <p>JavaScript Performance</p>
+
+
+    <script>
+        const obj = document.getElementById("demo");
+        obj.innerHTML = " Helloss";
+        obj.style.color = "blue";
+        obj.style.fontSize = "50px";
+
+        const minuman = document.getElementsByTagName("li");
+        document.getElementById("h1").innerHTML = minuman[1].innerHTML;
+        document.getElementById("h2").innerHTML = minuman[0].innerHTML;
+
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        const myCar1 = new Car("Ford", 2014);
+        const myCar2 = new Car("Audi", 2019);
+
+        document.getElementById("demo2").innerHTML =
+            myCar2.name + " " + myCar2.year;
+
+    </script>
+
+</body>
+
+</html>
